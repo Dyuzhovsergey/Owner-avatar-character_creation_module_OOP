@@ -116,12 +116,13 @@ def choice_char_class(char_name: str) -> Character:
     return char_class
 
 
-print('Приветствую тебя, искатель приключений!')
-print('Прежде чем начать игру...')
-char_name: str = input('...назови себя: ')
-print(f'Здравствуй, {char_name}! Сейчас твоя выносливость — 80, атака — 5 \
+if __name__ == '__main__':
+    print('Приветствую тебя, искатель приключений!')
+    print('Прежде чем начать игру...')
+    char_name: str = input('...назови себя: ')
+    print(f'Здравствуй, {char_name}! Сейчас твоя выносливость — 80, атака — 5 \
 и защита — 10.')
-print('Ты можешь выбрать один из трёх путей силы:')
-print('Воитель, Маг, Лекарь')
-char_class: str = choice_char_class(char_name)
-print(start_training(char_class))
+    print('Ты можешь выбрать один из трёх путей силы:')
+    print('Воитель, Маг, Лекарь')
+    char_class: str = choice_char_class(char_name)
+    print(start_training(char_class))
